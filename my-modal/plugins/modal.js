@@ -24,7 +24,7 @@ function __createModal(options) {
         } else {disabled = 'disabled'}
         modal.insertAdjacentHTML('afterbegin', `
             <div class="modal-overlay">
-                <div class="modal-window">
+                <div class="modal-window" style="width: ${options.width};">
                     <div class="modal-header">
                         <span class="modal-title">${options.title}</span>
                         ${closeBtn}
@@ -54,8 +54,6 @@ Q.modal = function(options) {
         open() {
             !closing && $modal.classList.add('open');
             document.body.addEventListener('click', this.close);
-                
-
         },
         close(e) {
             
