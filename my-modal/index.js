@@ -24,7 +24,10 @@ const deleteModal = Q.modal({
     <p>DELETE</p>
     `,
     footerButtons: [
-        {text: 'Close', type: 'primary', handler() {
+        {text: 'Delete', type: 'primary', handler() {
+            deleteModal.close()
+        }},
+        {text: 'Cancel', type: 'danger', handler() {
             deleteModal.close()
         }}
     ]
